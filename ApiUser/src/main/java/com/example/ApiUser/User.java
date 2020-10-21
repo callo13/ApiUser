@@ -14,6 +14,15 @@ public class User {
 	private long id;
 	
 	private String nom,prenom,mail,password;
+	private int metier;
+
+	public int getMetier() {
+		return metier;
+	}
+
+	public void setMetier(int metier) {
+		this.metier = metier;
+	}
 
 	public String getPrenom() {
 		return prenom;

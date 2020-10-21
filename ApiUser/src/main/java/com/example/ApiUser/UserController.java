@@ -1,6 +1,9 @@
 package com.example.ApiUser;
 
+
 import java.util.List;
+
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,9 +26,18 @@ public class UserController {
 	public List<User> user(@RequestParam(name = "name", required = true, defaultValue = "id")String name){
 		return (List<User>) userDao.findBynom(name);
 	}
+	@RequestMapping(value="/getUserbymail", method=RequestMethod.GET)
+	public List<User> mail(@RequestParam(name = "mail", required = true, defaultValue = "id")String mail){
+		return (List<User>) userDao.findBymail(mail);
+	}
 	@RequestMapping(value="/addUser", method=RequestMethod.POST)
 	public User adduser(@RequestBody User newUser){
 		return userDao.save(newUser);
+	}
+	@RequestMapping(value="/deleteUserbyname", method=RequestMethod.GET)
+	public void supprimer(@RequestParam(name = "name", required = true, defaultValue = "id")String name) {
+		userDao.deleteBynom(name);
+		//return " Utilisateur : " + name + " suprrimé ";
 	}
 	
 	
