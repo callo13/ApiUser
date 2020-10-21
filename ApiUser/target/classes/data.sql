@@ -1,3 +1,3 @@
-INSERT INTO user (id,nom,prenom,mail,password) VALUES(1, 'Vincent' , 'Floriane','floriane.vincent@naval-group.com','viflo83');
-INSERT INTO user (id,nom,prenom,mail,password) VALUES(2, 'Coquant' , 'Alice','alice.coquant@naval-group.com','coqal83');
+INSERT INTO user (id,nom,prenom,mail,password,metier) VALUES(1, 'Vincent' , 'Floriane','floriane.vincent@naval-group.com','viflo83',1);
+INSERT INTO user (id,nom,prenom,mail,password,metier) VALUES(2, 'Coquant' , 'Alice','alice.coquant@naval-group.com','coqal83',2);
 /*INSERT INTO AGENTS (AGENT_CODE ,AGENT_NAME ,WORKING_AREA ,COMMISSION ,PHONE_NO ,COUNTRY ) VALUES  ('A007', 'Ramasundar', 'Bangalore', '0.15', '077-25814763', 'FRANCE');*/

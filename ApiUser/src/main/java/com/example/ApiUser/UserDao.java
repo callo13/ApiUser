@@ -9,6 +9,7 @@ public interface UserDao extends CrudRepository<User, Long> {
 	
 	public List<User>findBynom(String name);
 	public List<User>findBymail(String email);
-	
+	public void deleteBynom(String name);
+
 
 }
